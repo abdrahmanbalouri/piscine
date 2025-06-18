@@ -22,7 +22,7 @@ const dogYears =(planet ,age)=>{
 
     const kk = final.toFixed(2)
 
-    return kk
+    return Number(kk)
 
 
 
