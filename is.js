@@ -1,4 +1,4 @@
-const is ={}
+//const is ={}
 function num(a) {
 
     if (typeof a == 'number') {
@@ -37,7 +37,7 @@ function def(a) {
     if (typeof a !== 'undefined') {
         return true
     }
-
+return !a
     return false
 
 
