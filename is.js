@@ -1,3 +1,4 @@
+const is ={}
 function num(a) {
 
     if (typeof a == 'number') {
@@ -82,32 +83,7 @@ function truthy(a) {
 }
 
 function falsy(a) {
-    if (typeof a =='object'){
-  for (let i= 0;i<a.length;i++){
-    
-         if (a[i]== false|| a[i]== 0 || a[i]== -0 || a[i]== 0n || a[i]== '' || a[i]== null || a[i]== undefined || a[i]== NaN) {
-        return true
-    }
-
-
-  }
-   
-            
-   
-            
-         return false
-
-    }
-   
-
-    
-
-    if (a == false || a == 0 || a == -0 || a == 0n || a == '' || a == null || a == undefined || a == NaN) {
-        return true
-    }
-
-    return false
-
+ return !a
 
 }
 
@@ -125,4 +101,4 @@ is.falsy = falsy
 
 
 
-console.log(is.falsy([0, NaN, '', undefined, null, void 0]));
+console.log(is.falsy(''));
