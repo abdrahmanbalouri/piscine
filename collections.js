@@ -7,18 +7,14 @@ const arrToStr =(a)=>{
 
 }
 const setToArr =(a)=>{
-    let k =[]
-     for (value of a){
-       k.push(value)
-     }
-
-     return k
+     return [...a]
 
 }
 const setToStr =(a)=>{
+    let k = [...a]
 
 
-    return [...a]
+    return k.join("")
 
 }
 const strToArr =(a)=>{
@@ -102,8 +98,8 @@ const superTypeOf =(a)=>{
 
 }
 
-let s =new Set ([1,2,2])
+let n = new Set([1,2,3,2])
 
-console.log(setToArr(s));
+console.log(setToStr(n));
 
 
