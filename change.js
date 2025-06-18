@@ -1,9 +1,4 @@
-const sourceObject = {
-  num: 42,
-  bool: true,
-  str: 'some text',
-  log: console.log,
-}
+
 const get = (a)=>{
 
     return sourceObject[a]
@@ -15,7 +10,7 @@ const get = (a)=>{
 }
 
 const set = (a,b)=>{
-    sourceObject[a] =5
+    sourceObject[a] =b
     return sourceObject[a]
 
 
