@@ -37,12 +37,8 @@ const mapToObj = (a)=>{
 
 }
 const objToArr = (a)=>{
-    let k =[]
-    for (value in a){
-        k.push(a[value])
-
-    }
-  return k
+   let k = Object.values(a)
+   return k
 
 }
 
@@ -100,6 +96,6 @@ const superTypeOf =(a)=>{
 
 let n = new Set([1,2,3,2])
 
-console.log(setToStr(n));
+console.log(objToArr({x:4,d:4}));
 
 
