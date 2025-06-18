@@ -19,9 +19,10 @@ const yell = (a)=>{
 
 }
 const whisper =(a)=>{
-    return a.toLowerCase()
+    
+    let k= ['*',a.toLowerCase(),'*']
 
-
+  return  k.join("")
 }
 const capitalize =(a)=>{
 
@@ -30,6 +31,9 @@ const capitalize =(a)=>{
 
 
 }
+
+console.log(whisper('HHHHHHHH'));
+
 
 
 
