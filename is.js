@@ -37,7 +37,6 @@ function def(a) {
     if (typeof a !== 'undefined') {
         return true
     }
-return !a
     return false
 
 
