@@ -1,6 +1,6 @@
  const isPositive = (a)=>{
 
-    if (a>=0){
+    if (a>0){
         return true
     }
 
@@ -16,5 +16,5 @@
 
  }
 
- console.log(abs(-5));
+ console.log(isPositive(0));
  
