@@ -14,7 +14,7 @@ function str(a){
     false
 }
  function nan(a){
-    if (isNaN(a)){
+    if (Number.isNaN(a)){
         return true
     }
     return false
@@ -108,4 +108,4 @@ is.falsy=falsy
 
 
 
-console.log(is);
+console.log(is.nan(NaN));
