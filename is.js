@@ -1,8 +1,4 @@
 
-
-const is ={
-   
-}
  function num(a){
 
     if (typeof a =='number') {
