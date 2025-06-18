@@ -1,19 +1,18 @@
 
 
-const is ={
-
-    num:num,
-     nan:nan,
-     str:str,
-    bool:bool,
-     undef:undef,
-     def:def,
-     arr:arr,
-    obj:obj,
-     fun:fun,
-     truthy:truthy,
-     falsy:falsy,
-}
+// const is ={
+//     num:num,
+//      nan:nan,
+//      str:str,
+//     bool:bool,
+//      undef:undef,
+//      def:def,
+//      arr:arr,
+//     obj:obj,
+//      fun:fun,
+//      truthy:truthy,
+//      falsy:falsy,
+// }
  function num(a){
 
     if (typeof a =='number') {
@@ -112,3 +111,4 @@ if (a==false || a==0|| a==-0|| a==0n||a==""||a==null||a==undefined||a==NaN){
 
 
 
+console.log(is.num('ciao'))
