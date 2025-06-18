@@ -73,11 +73,7 @@ function fun(a) {
     return false
 }
 function truthy(a) {
-    if (a !== false && a !== 0 && a !== -0 && a !== 0n && a !== "" && a !== null && a !== undefined && a !== NaN) {
-        return true
-    }
-
-    return false
+      return !!a
 
 }
 
