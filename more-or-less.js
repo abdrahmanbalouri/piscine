@@ -6,7 +6,7 @@ const more = (a)=>{
 
 }
 const less = (a)=>{
-    a-1
+  return    a-1
 
 
 }
