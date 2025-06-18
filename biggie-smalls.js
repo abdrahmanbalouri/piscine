@@ -1,3 +1,3 @@
-let  smalls = Number.MIN_VALUE*2
+let  smalls = -1.7976931348623157e308+-1.7976931348623157e308
 
 let biggie = Number.MAX_VALUE*2
