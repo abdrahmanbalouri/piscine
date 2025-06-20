@@ -46,4 +46,4 @@ return end
 
 
 }
-console.log(RNA(DNA('AUCG')));
+console.log(DNA('AUCG'));

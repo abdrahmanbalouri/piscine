@@ -28,7 +28,6 @@ const multiply= (a,b)=>{
 
 
 }
-console.log(multiply(123,0));
 
 
 const divide = (a,b)=>{
@@ -80,7 +79,7 @@ let k = false
     }
     let c =a
 
-    while (c-b>0){
+    while (c-b>=0){
         c-=b
     }
 
@@ -93,7 +92,7 @@ let k = false
 }
 
 
-console.log(modulo(123,-22));
+console.log(modulo(10,2));
 
 
 
