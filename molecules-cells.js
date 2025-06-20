@@ -24,7 +24,7 @@ return end
 const DNA =(str)=>{
     let end =''
  let k =new Map([["C","G"],
-  ["G","c"],
+  ["G","C"],
   ["A","T"],
   ["U", "A"]
 ])
@@ -46,4 +46,4 @@ return end
 
 
 }
-console.log(DNA('CGAUJ'));
+console.log(RNA(DNA('AUCG')));
