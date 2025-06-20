@@ -118,7 +118,4 @@ const trunc =(a)=>{
 }
 
 
-console.log(trunc(3.2));
-
-console.log(Math.trunc(3.2));
 
