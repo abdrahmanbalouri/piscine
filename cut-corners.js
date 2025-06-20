@@ -31,7 +31,7 @@ const round = (a)=>{
   
     
     let b = hayadlfasila(a)
-    if (a==0){
+    if (a===0){
         return 0
     }
     if (a>0 && a!==b){
@@ -60,7 +60,7 @@ const round = (a)=>{
 
 const ceil = (a)=>{
         let b = hayadlfasila(a)
-    if (a==0){
+    if (a===0){
         return 0
     }
     if (a>0 && a!==b){
@@ -85,7 +85,7 @@ const ceil = (a)=>{
 const floor = (a)=>{
 
          let b = hayadlfasila(a)
-    if (a==0){
+    if (a===0){
         return 0
     }
     if (a>0 && a!==b){
@@ -119,3 +119,4 @@ const trunc =(a)=>{
 
 
 
+console.log(round( [3, -3, 2, -2, 0]));
