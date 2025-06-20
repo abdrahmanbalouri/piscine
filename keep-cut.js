@@ -32,8 +32,11 @@ const keepFirstLast = (str)=>{
         return str
     }
         let k = str.length -2
+        if (k<2){
+            k+=1
+        }
         return  str.slice(0,2)+str.slice(k,)
 
 
 }
-console.log(keepFirstLast('1b'));
+console.log(keepFirstLast('1bd44'));
