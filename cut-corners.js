@@ -85,6 +85,9 @@ const floor = (a) => {
 
 
 const trunc = (a) => {
+    if (a===0){
+        return 0
+    }
     return hayadlfasila(a)
 
 
@@ -93,5 +96,5 @@ const trunc = (a) => {
 
 
 
-console.log(trunc(68719476766.654564655));
+console.log(trunc(68719476735.654564655));
 
