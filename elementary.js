@@ -71,15 +71,16 @@ let k = false
 
   
     if (a<0){
-        a=-a    
+        a=-a   
+     k =true
+
     }
     if (b<0){
         b=-b
-        k =true
     }
     let c =a
 
-    while (c-b>=0){
+    while (c-b>0){
         c-=b
     }
 
@@ -90,5 +91,9 @@ let k = false
     return c
 
 }
+
+
+console.log(modulo(123,-22));
+
 
 
