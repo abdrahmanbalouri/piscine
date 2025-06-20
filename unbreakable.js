@@ -6,7 +6,7 @@ const split = (a,target)=>{
 
     for (let i=0;i<a.length;i++){
 
-        if (a[i]===' '&& v!==''){
+        if (a[i]===target && v!==''){
 
             k.push(v)
             v=''
@@ -25,6 +25,7 @@ const split = (a,target)=>{
   }
  return k
 }
+
 
 const join =(a,target)=>{
 
