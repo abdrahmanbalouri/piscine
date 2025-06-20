@@ -39,7 +39,6 @@ const  includes = (arr,target)=>{
     return false
 }
 
-[1,2,3,4].indexOf(2)
 
 
  
