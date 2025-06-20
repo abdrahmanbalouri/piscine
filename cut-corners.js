@@ -96,5 +96,5 @@ const trunc = (a) => {
 
 
 
-console.log(trunc(68719476735.654564655));
+console.log(trunc(68719476734.654564655));
 
