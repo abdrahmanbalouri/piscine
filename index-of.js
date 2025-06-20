@@ -15,8 +15,11 @@ const indexOf =(a,b,c)=>{
 
 
 }
-const lastIndexOf = (arr ,target)=>{
-    for(let i =arr.length-1;i>=0;i--){
+const lastIndexOf = (arr ,target,c)=>{
+    if (c==undefined){
+        c= arr.length-1
+    }
+    for(let i =c;i>=0;i--){
 
         if (arr[i]===target){
             return i
@@ -39,7 +42,7 @@ const  includes = (arr,target)=>{
     return false
 }
 
-console.log(lastIndexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2));
+console.log( lastIndexOf(['t', 0, 0, 't'], 't', 2) );
 
 
 
