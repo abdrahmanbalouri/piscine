@@ -44,7 +44,4 @@ const slice = (str,start ,end)=>{
 
 }
 
-console.log([15,2,6].slice(-1,-2));
-
-console.log(slice([15,2,6],-1,-2));
 
