@@ -1,7 +1,7 @@
 const slice = (str,start ,end)=>{
     if (end == undefined){
 
-        end = str.length-1
+        end = str.length
     }
 
     if (Array.isArray(str)){
@@ -43,5 +43,6 @@ const slice = (str,start ,end)=>{
 
 
 }
+console.log(slice('abcdef',2));
 
 
