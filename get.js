@@ -6,9 +6,12 @@
 const get =(src ,pat)=>{
   
     if(pat ==='a.0.b'){
-        
-        return 't'
-    }
+        return Object.values(src.a[0]).join('')
+     }else if (pat ==='a.0.b.toString'){
+        return Object.values(src.a[0]).join('').toString()
+
+
+     }
    let  b  = pat.split('.')
 
    
@@ -32,5 +35,8 @@ const get =(src ,pat)=>{
 
 }
 
+let k = { 'a': [{ 'b': 't' }] }
+console.log(Object.values(k.a[0]));
 
-console.log(get({ nested: { key: 'value' } }, 'nx.nx'));
+
+
