@@ -78,20 +78,13 @@ const floor = (a) => {
 
 
 const trunc = (a) => {
-    if (a==68719476735){
-        return 68719476735
-    }
-
-
-
-  
-    if (a === 0) {
-        return 0
-    }
-    return hayadlfasila(a)
-
+    let s = String(a)
+  const dotIndex = s.indexOf('.');
+  if (dotIndex === -1) return -1; 
+  const intPart = s.slice(0, dotIndex);
+  return   Number(intPart)
 }
 
-console.log(trunc(68719476735));
+console.log(trunc(6871947673555.5555));
 
 
