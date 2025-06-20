@@ -2,41 +2,30 @@
 
 
 const hayadlfasila = (k) => {
-     let c =false
-
-     if (k>68719476735){
-
-        k-=68719476735
-
-        c =true 
-      
-     }
-
-    
-    
+    let c = false
+    if (k >= 68719476735) {
+        k -= 68719476735
+        c = true
+    }
     if (k > 0) {
         let b = 0
         for (let i = 0; i <= k; i++) {
-
             b++
         }
-        if(c){
-            return b-1 +68719476735
+        if (c) {
+            return b - 1 + 68719476735
         }
-
         return b - 1
     } else if (k < 0) {
 
         let b = 0
         for (let i = 0; i <= -k; i++) {
-
             b--
         }
-        if (c){
-            return b +1 +68719476735
+        if (c) {
+            return b + 1 + 68719476735
         }
         return b + 1
-
     }
 }
 
@@ -97,12 +86,12 @@ const floor = (a) => {
 
 const trunc = (a) => {
     return hayadlfasila(a)
-   
+
 
 }
 
 
 
 
-console.log(trunc(68719476735444.654564655));
+console.log(trunc(68719476766.654564655));
 
