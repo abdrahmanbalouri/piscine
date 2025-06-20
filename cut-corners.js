@@ -111,6 +111,9 @@ const floor = (a)=>{
 
 
 const trunc =(a)=>{
+    if(a===0){
+        return 0
+    }
 
     
     return hayadlfasila(a)
@@ -119,4 +122,4 @@ const trunc =(a)=>{
 
 
 
-console.log(round( [3, -3, 2, -2, 0]));
+console.log(trunc(0));
