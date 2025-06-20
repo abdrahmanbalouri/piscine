@@ -14,7 +14,7 @@ const get =(src ,pat)=>{
    
    if(b[b.length-1]!=='key'){
 
-             return 'undefined'
+             return undefined
  
    }
    if (b.length>1){
