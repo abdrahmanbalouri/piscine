@@ -1,4 +1,65 @@
+import { log } from "node:console"
 
+const slice = (str,start ,end)=>{
+    if (end == undefined){
+
+        end = str.length
+    }
+
+    if (Array.isArray(str)){
+
+        var k=[] 
+        if (start<0){
+            start = str.length +start
+        }
+ if (end<0){
+            end = str.length +end
+        }
+        for(let i=start;i<end;i++){
+
+           k.push(str[i])
+
+
+        }
+
+
+    }else{
+   var k =''
+      if (start<0){
+            start = str.length +start
+        }
+ if (end<0){
+            end = str.length +end
+        }
+        
+        for(let i=start;i<end;i++){
+
+            k+=str[i]
+
+
+        }
+
+
+    }
+ return k
+
+
+}
+const indexOf =(a,b)=>{
+
+
+    for(let i=0;i<a.length;i++){
+
+        if (a[i]===b){
+            return i
+
+
+        }
+    }
+    return -1
+
+
+}
 const hayadlfasila = (k) => {
 
     
@@ -78,13 +139,16 @@ const floor = (a) => {
 
 
 const trunc = (a) => {
-    let s = String(a)
-  const dotIndex = s.indexOf('.');
+    let s = a.toString()
+    
+  const dotIndex = indexOf(s,'.');
   if (dotIndex === -1) return -1; 
-  const intPart = s.slice(0, dotIndex);
+  const intPart = slice(s,0,dotIndex);
   return   Number(intPart)
 }
 
-console.log(trunc(6871947673555.5555));
 
 
+
+
+console.log(trunc(3333333333333.5));
