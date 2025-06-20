@@ -1,28 +1,4 @@
-const modulo =(a,b)=>{
-let k = false
 
-  
-    if (a<0){
-        a=-a   
-     k =true
-
-    }
-    if (b<0){
-        b=-b
-    }
-    let c =a
-
-    while (c-b>0){
-        c-=b
-    }
-
-    if (k){
-        return -c
-    }
-
-    return c
-
-}
 
 
 const hayadlfasila = (k) => {
@@ -104,52 +80,28 @@ const floor = (a) => {
 
 
 const trunc = (a) => {
+    let k =false
+    let b =0
 
-    if (a>100000000000000000){
-         let c = modulo(a, 100000000000000000)
-          
-            return a - c
+     if (a>68719476735){
 
+        a-=68719476735
+             b =hayadlfasila(a)
 
-    } else if (a>1000000000000){
+        k =true 
+      
+     }
 
+     if (k){
 
- let c = modulo(a, 1000000000000)
-          
-            return a - c
-
-  
-
-
-    }else if (a>100000000){
-          let c = modulo(a, 100000000)
-          
-            return a - c
-
-    
-
-    } else if (a > 100000) {
-         let k = modulo(a,100000)
-
-        return a-k
-    }else if (a>10){
-
-                 let k = modulo(a,10)
-                 return a -k
-
-
-    }else{
-
-         let k = modulo(a,1)
-                 return a -k
-    }
-    
-       
+        return b +68719476735
+     }
+       return b
 
 }
 
 
 
 
-console.log(trunc(3444444444444444444444.654564655));
+console.log(trunc(687194767354444.654564655));
 
