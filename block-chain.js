@@ -5,30 +5,38 @@ const hashCode = str =>
   ).toString(36)
 
 
-const data ={
-     a: 1 
-} 
-const prev ={
-            index: 0,
-             hash: '0'
-        }
+const data = {
+  a: 1
+}
+const prev = {
+  index: 0,
+  hash: '0'
+}
 
-const blockChain =(data, prev)=>{
-    const s ={}
-       
-    
-   s['data']=data
-   s['prev']=prev
-   s['hash']= hashCode(data)
+const blockChain = (data, prev) => {
+  const s = {}
 
-   
-   return s
+
+  s['data'] = data
+  s['prev'] = prev
+  s['hash'] = hashCode(data)
+
+
+  return s
 
 
 }
-const kk  =blockChain(data ,prev)
+const kk = blockChain(data, prev)
 
 console.log(kk);
 
 
+const nums = [Math.PI, -Math.PI, Math.E, -Math.E, 0]
 
+t(({ code }) => !/String|['"`]|toFixed|slice/.test(code))
+t(({ code }) => !code.includes('~'))
+t(({ code }) => !code.includes('%'))
+t(({ code }) => !code.includes('>>'))
+t(({ code }) => !/[^|]\|[^|]/.test(code))
+t(({ code }) => !/[^&]&[^&]/.test(code))
+t(({ code }) => !code.includes('parseInt'))
