@@ -35,8 +35,7 @@ const get =(src ,pat)=>{
 
 }
 
-let k = { 'a': [{ 'b': 't' }] }
-console.log(Object.values(k.a[0]));
+
 
 
 
