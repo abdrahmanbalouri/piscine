@@ -1,30 +1,28 @@
 const split = (a,target)=>{
-
-
+    if (a==''){
+        return ['']
+    }
     let k =[]
     let v=''
-
     for (let i=0;i<a.length;i++){
+        if (a.slice(i,i+target.length)===target ){
 
-        if (a[i]===target && v!==''){
-
+            console.log(88);
+            
             k.push(v)
             v=''
+            i = i+target.length-1
 
         }else{
-
             v+=a[i]
         }
-
-
     }
-  if (v!==''){
-    console.log(v);
-    
+  
     k.push(v)
-  }
+  
  return k
 }
+   
 
 
 const join =(a,target)=>{
@@ -35,7 +33,7 @@ const join =(a,target)=>{
 
         k+= a[i]
         if (i!==a.length-1){
-                    k+= target
+            k+= target
 
         }
 
@@ -46,4 +44,6 @@ const join =(a,target)=>{
 
 
 }
+console.log(join(['a', 'b', 'c'], ' '));
+
  
