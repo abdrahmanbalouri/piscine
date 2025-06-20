@@ -104,11 +104,29 @@ const floor = (a) => {
 
 
 const trunc = (a) => {
-    if (a>100000000){
+
+    if (a>100000000000000000){
+         let c = modulo(a, 100000000000000000)
+          
+            return a - c
+
+
+    } else if (a>1000000000000){
+
+
+ let c = modulo(a, 1000000000000)
+          
+            return a - c
+
+  
+
+
+    }else if (a>100000000){
           let c = modulo(a, 100000000)
           
             return a - c
 
+    
 
     } else if (a > 100000) {
          let k = modulo(a,100000)
@@ -133,5 +151,5 @@ const trunc = (a) => {
 
 
 
-console.log(trunc(344444444444.654564655));
+console.log(trunc(3444444444444444444444.654564655));
 
