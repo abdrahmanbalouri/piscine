@@ -104,6 +104,12 @@ const floor = (a) => {
 
 
 const trunc = (a) => {
+    if (a<10){
+          
+            return a
+
+
+    }
         let k = modulo(a,10)
 
         return a-k
@@ -113,4 +119,5 @@ const trunc = (a) => {
 
 
 
+console.log(trunc(3));
 
