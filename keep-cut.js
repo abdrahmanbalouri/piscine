@@ -23,13 +23,17 @@ const keepFirst = (str)=>{
 }
 const keepLast = (str)=>{
     let k = str.length -2
+
     return str.slice(k,)
 
 }
 const keepFirstLast = (str)=>{
+     if (str.length==2){
+        return str
+    }
         let k = str.length -2
         return  str.slice(0,2)+str.slice(k,)
 
 
 }
-console.log(keepFirstLast('1bceeeee'));
+console.log(keepFirstLast('1b'));
