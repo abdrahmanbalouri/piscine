@@ -137,13 +137,13 @@ const floor = (a) => {
 }
 
 
-const trunc = (a) => {
-    let s = a.toString()
-    
-  const dotIndex = indexOf(s,'.');
-  if (dotIndex === -1) return -1; 
-  const intPart = slice(s,0,dotIndex);
-  return   Number(intPart)
+const trunc = (x) => {
+  const big = 1e9;
+  if (x >= 0) {
+    return (x * big - (x * big) % big) / big;
+  } else {
+    return -(((-x) * big - ((-x) * big) % big) / big);
+  }
 }
 
 
