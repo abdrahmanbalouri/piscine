@@ -1,20 +1,56 @@
+
+  const hayadlfasila =(k)=>{
+    if (k>0){
+               let b= 0
+    for(let i = 0;i<=k;i++){
+
+         b++
+    }
+
+  return b-1
+    }else if  (k<0){
+
+              let b= 0
+    for(let i = 0;i<=-k;i++){
+
+         b--
+    }
+    return b+1
+
+    }
+ 
+
+
+
+
+  }
+
+  
 const round = (a)=>{
-    let b = a|0
+    
+  
+    
+    let b = hayadlfasila(a)
     if (a==0){
         return 0
     }
     if (a>0 && a!==b){
 
         
-        a =a +0.5
 
-        return a|0
+        
+         a =a +0.5
+         
+         
 
+           
+        return  hayadlfasila(a) 
 
     }else if (a<0 && b){
+        
 
         a = a- 0.5
-        return a|0
+        return  hayadlfasila(a) 
     }
 
   return a
@@ -23,7 +59,7 @@ const round = (a)=>{
 }
 
 const ceil = (a)=>{
-        let b = a|0
+        let b = hayadlfasila(a)
     if (a==0){
         return 0
     }
@@ -32,13 +68,13 @@ const ceil = (a)=>{
         
         a =a +0.9
 
-        return a|0
+        return hayadlfasila(a)
 
 
     }else if (a<0 && b){
 
         a = a
-        return a|0
+        return hayadlfasila(a)
     }
 
   return a
@@ -48,7 +84,7 @@ const ceil = (a)=>{
 }
 const floor = (a)=>{
 
-         let b = a|0
+         let b = hayadlfasila(a)
     if (a==0){
         return 0
     }
@@ -57,15 +93,13 @@ const floor = (a)=>{
         
     
 
-        return a|0
+        return hayadlfasila(a)
 
 
     }else if (a<0 && b){
-        console.log(44);
         
 
-        a = a-0.9
-        return a|0
+        return hayadlfasila(a)-1
     }
 
   return a
@@ -78,9 +112,13 @@ const floor = (a)=>{
 
 const trunc =(a)=>{
 
-    return a|0
+    
+    return hayadlfasila(a)
 
 }
 
 
+console.log(trunc(3.2));
+
+console.log(Math.trunc(3.2));
 
