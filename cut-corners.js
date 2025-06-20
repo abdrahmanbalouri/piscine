@@ -1,5 +1,10 @@
 
 const hayadlfasila = (k) => {
+
+    if (k>1000000000){
+
+        return 1000000000
+    }
     if (k > 0) {
         let b = 0
         for (let i = 0; i <= k; i++) {
@@ -76,6 +81,10 @@ const floor = (a) => {
 
 
 const trunc = (a) => {
+
+
+
+  
     if (a === 0) {
         return 0
     }
