@@ -2,12 +2,20 @@ const split = (a,target)=>{
     if (a==''){
         return ['']
     }
+    if (target ==''){
+
+           let l =[]
+        for(let i = 0;i<a.length;i++){
+            l.push(a[i])
+
+        }
+        return l
+    }
     let k =[]
     let v=''
     for (let i=0;i<a.length;i++){
         if (a.slice(i,i+target.length)===target ){
 
-            console.log(88);
             
             k.push(v)
             v=''
@@ -24,6 +32,7 @@ const split = (a,target)=>{
 }
    
 
+console.log(split('Riad', ''));
 
 const join =(a,target)=>{
 
