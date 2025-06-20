@@ -1,4 +1,3 @@
-import { log } from "node:console"
 
 const slice = (str,start ,end)=>{
     if (end == undefined){
