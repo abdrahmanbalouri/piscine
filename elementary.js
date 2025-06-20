@@ -14,9 +14,9 @@ const multiply= (a,b)=>{
         b=-b
         k=true
     }
-    let c =a
+    let c =0
 
-    for (let i =1;i<b;i++){
+    for (let i =0;i<b;i++){
         c+=a
 
     }
@@ -28,6 +28,8 @@ const multiply= (a,b)=>{
 
 
 }
+console.log(multiply(123,0));
+
 
 const divide = (a,b)=>{
  let k = false
