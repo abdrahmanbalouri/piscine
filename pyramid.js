@@ -1,4 +1,4 @@
-const triangle =(str,num)=>{
+const  pyramid=(str,num)=>{
     let k =[]
 
     for (let i =0;i<num;i++){
@@ -13,4 +13,3 @@ const triangle =(str,num)=>{
   return k.join('\n')
 }
 
-console.log(triangle('aa',5));
