@@ -1,39 +1,13 @@
- const src = { nested: { key: 'peekaboo' } }
- const path = 'nested.key'
-  
-
-
-const get =(src ,pat)=>{
-  
-    if(pat ==='a.0.b'){
-        return Object.values(src.a[0]).join('')
-     }else if (pat ==='a.0.b.toString'){
-        return Object.values(src.a[0]).join('').toString()
-
-
-     }
-   let  b  = pat.split('.')
-
-   
-   if(b[b.length-1]!=='key'){
-
-             return undefined
- 
+const get = (src, path) => {
+   let key = path.split('.')
+   let res = src
+   for (let i = 0; i < key.length; i++) {
+      if (res == undefined) return undefined
+      res = res[key[i]]
    }
-   if (b.length>1){
-   
-     return Object.values(src[b[0]]).join('')
-   }else{
-    
-    
-
-      return Object.values(src).join('')
-   }
-      
-
-
-
+   return res
 }
+
 
 
 
