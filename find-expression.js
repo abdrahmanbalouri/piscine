@@ -1,4 +1,5 @@
 
+
 const findExpression = (n) => {
 
     let k = ['1']
@@ -30,7 +31,7 @@ const findExpression = (n) => {
                 k.push(add4)
                 return k.join(' ')
             }else{
-                return 'undefined'
+                return undefined
             }
 
         }else{
@@ -50,7 +51,7 @@ const findExpression = (n) => {
         } else  {
 
 
-            return 'undefined'
+            return undefined
         }
         }
        
@@ -65,4 +66,3 @@ const findExpression = (n) => {
 
 
 }
-console.log(findExpression(144));
