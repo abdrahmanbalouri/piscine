@@ -2,10 +2,10 @@ const vowelDots =(str)=>{
 
 
 
-    const regex = /[aeio]/gi
+    const vowels = /[aeio]/gi
 
-    str = str.replace(regex,(value)=>value+'.')
-    return str
+    str1 = str.replace(vowels,(value)=>value+'.')
+    return str1
 
 
 
