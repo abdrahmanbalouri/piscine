@@ -1,16 +1,16 @@
 
-// const add4 = '+4'
-// const mul2 = '*2'
 const findExpression = (n) => {
 
     let k = ['1']
-
+  
     let val = 1
 
     while (val < n) {
 
         if (val + 4 == n) {
+            
             k.push(add4)
+            console.log(k.length);
             return k.join(' ')
 
 
@@ -29,26 +29,35 @@ const findExpression = (n) => {
 
                 k.push(add4)
                 return k.join(' ')
+            }else{
+                return 'undefined'
             }
 
-        }
-        if (val * 2 < n) {
+        }else{
+
+
+
+ if (val * 2 < n) {
             val = val * 2
 
             k.push(mul2)
 
         } else if (val * 2 == n) {
+  console.log(k.length);
 
             k.push(mul2)
             return k.join(' ')
-        } else {
+        } else  {
 
 
             return 'undefined'
         }
+        }
+       
 
     }
 
+  console.log(k.length);
 
 
     return k.join(' ')
@@ -56,4 +65,4 @@ const findExpression = (n) => {
 
 
 }
-console.log(findExpression(8));
+console.log(findExpression(144));
