@@ -1,7 +1,11 @@
 const groupPrice =(str)=>{
-    const regex  = /[USD|$]\d+[.]\d+/g
+    const regex  = /(USD|[$])\d+[.]\d+/g
 
     let a = str.match(regex)
+     if (a===null){
+        return []
+     }
+    
     
     let k=[]
 
