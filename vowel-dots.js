@@ -4,8 +4,8 @@ const vowelDots =(str)=>{
 
     const regex = /[aeio]/gi
 
-    kk = str.replace(regex,(value)=>value+'.')
-    return kk
+    str = str.replace(regex,(value)=>value+'.')
+    return str
 
 
 
