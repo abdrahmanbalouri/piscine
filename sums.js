@@ -1,8 +1,14 @@
 const sums = (num) => {
 
+    if (num ==0){
+        return []
+    }
+
     let k = []
 
     const sol = (target, arr, start) => {
+
+        
         if (target == 0) {
 
             k.push([...arr])
