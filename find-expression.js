@@ -3,13 +3,13 @@
 const findExpression = (n) => {
 
     let k = ['1']
-  
+
     let val = 1
 
     while (val < n) {
 
         if (val + 4 == n) {
-            
+
             k.push(add4)
             console.log(k.length);
             return k.join(' ')
@@ -30,35 +30,35 @@ const findExpression = (n) => {
 
                 k.push(add4)
                 return k.join(' ')
-            }else{
+            } else {
                 return undefined
             }
 
-        }else{
+        } else {
 
 
 
- if (val * 2 < n) {
-            val = val * 2
+            if (val * 2 < n) {
+                val = val * 2
 
-            k.push(mul2)
+                k.push(mul2)
 
-        } else if (val * 2 == n) {
-  console.log(k.length);
+            } else if (val * 2 == n) {
+                console.log(k.length);
 
-            k.push(mul2)
-            return k.join(' ')
-        } else  {
+                k.push(mul2)
+                return k.join(' ')
+            } else {
 
 
-            return undefined
+                return undefined
+            }
         }
-        }
-       
+
 
     }
 
-  console.log(k.length);
+    console.log(k.length);
 
 
     return k.join(' ')
