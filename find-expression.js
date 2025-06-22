@@ -1,3 +1,5 @@
+
+
 const findExpression = (n) => {
 
     let k = ['1']
@@ -7,7 +9,7 @@ const findExpression = (n) => {
     while (val < n) {
 
         if(val +4==n ){
-            k.push('+4')
+            k.push(add4)
             return k.join(' ')
 
 
@@ -21,10 +23,10 @@ const findExpression = (n) => {
             if (val + 4 < n) {
                 val = val + 4
 
-                k.push('+4')
+                k.push(add4)
             } else if (val + 4 == n) {
 
-                k.push('+4')
+                k.push(add4)
                 return k.join(' ')
             }
 
@@ -32,11 +34,11 @@ const findExpression = (n) => {
       if (val * 2 < n) {
             val = val * 2
 
-            k.push('*2')
+            k.push(mul2)
 
         } else if (val * 2 == n) {
 
-            k.push('*2')
+            k.push(mul2)
             return k.join(' ')
         } else {
 
