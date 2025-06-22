@@ -33,7 +33,7 @@ const getURL =(str)=>{
 
  }
  const notSoGreedy =(str)=>{
-        const  regex=  /(http|https):\/\/[^\s]+/g 
+        const  regex= /(http|https):\/\/[^\s]+/g 
 
         let a= str.match(regex)
         let k = []
