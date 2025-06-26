@@ -14,8 +14,11 @@ const isAfter =(date ,date2)=>{
     if(isValid(date) == false) return false
 
     if(isValid(date2) == false) return false
+    let date0  = new Date(date)
+        let dates  = new Date(date2)
 
-    if(date.getTime()>date2.getTime()){
+      
+    if(date0.getTime()> dates.getTime()){
              return true
     }
 
@@ -24,12 +27,14 @@ const isAfter =(date ,date2)=>{
 
 }
 const isBefore =(date,date2)=>{
-
-   if(isValid(date) == false) return false
+ if(isValid(date) == false) return false
 
     if(isValid(date2) == false) return false
+    let date0  = new Date(date)
+        let dates  = new Date(date2)
 
-    if(date.getTime()<date2.getTime()){
+      
+    if(date0.getTime()< dates.getTime()){
              return true
     }
 
@@ -42,8 +47,10 @@ const isBefore =(date,date2)=>{
 const isFuture =(date)=>{
  if(isValid(date) == false) return false
 
+ let b =new Date(date)
 
-    if(date.getTime()>  Date.now()){
+
+    if(b.getTime()>  Date.now()){
              return true
     }
 
@@ -52,10 +59,12 @@ const isFuture =(date)=>{
 
 }
 const isPast =(date)=>{
- if(isValid(date) == false) return false
+if(isValid(date) == false) return false
+
+ let b =new Date(date)
 
 
-    if(date.getTime()<  Date.now()){
+    if(b.getTime()<  Date.now()){
              return true
     }
 
@@ -63,3 +72,5 @@ const isPast =(date)=>{
  return false
 
 }
+
+console.log(isAfter(123123, 526));
