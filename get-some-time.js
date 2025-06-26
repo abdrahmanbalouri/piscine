@@ -1,6 +1,6 @@
 const firstDayWeek = (week, year) => {
 
-    let dat = new Date('01-014-0001')
+    let dat = new Date('01-01-0001')
     dat.setFullYear(year)
     
     
