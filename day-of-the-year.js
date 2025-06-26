@@ -5,10 +5,19 @@ const dayOfTheYear=(date)=>{
 
     datef.setFullYear(c-1)
     let k = Math.floor(((date-datef)/(1000*60*60*24)))+1
+
+    console.log(88888);
+    
     if (k==367){
         return 1
     }
    
+
+
+
+
+
+    
     return k
        
 
