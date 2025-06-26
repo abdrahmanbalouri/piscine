@@ -20,7 +20,7 @@ const timeTravel = ({ date, hour, minute, second }) => {
 
         date.setHours(hour)
         date.setMinutes(minute)
-        date.setHours(second)
+        date.setSeconds(second)
 
         
 
