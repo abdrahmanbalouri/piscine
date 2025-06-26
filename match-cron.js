@@ -25,7 +25,7 @@ const matchCron =(str,date)=>{
 
         }else if(i==3){
 
-             ff = bb[i] == date.getMonth()
+             ff = bb[i] == date.getMonth()+1
 
 
         }else if(i==4){
@@ -43,4 +43,4 @@ const matchCron =(str,date)=>{
 
 
 }
-console.log(matchCron('9 * * * *', new Date('2020-05-30 19:21:00')));
+console.log(matchCron('* * * 2 *', new Date('2021-02-01 00:00:00')));
