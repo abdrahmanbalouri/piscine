@@ -1,6 +1,7 @@
 const firstDayWeek = (week, year) => {
 
-    let dat = new Date(Number(year) ,0,1)
+    let dat = new Date('01-014-0001')
+    dat.setFullYear(year)
     
     
    dat.setDate((week*7)-6)
@@ -17,4 +18,4 @@ const firstDayWeek = (week, year) => {
    
 
 }
-console.log(firstDayWeek(2, '2017'));
+console.log(firstDayWeek(2, '0001'));
