@@ -25,4 +25,3 @@ const reverse = (a)=>{
 
   return k
 }
-console.log(reverse('55555412'));
