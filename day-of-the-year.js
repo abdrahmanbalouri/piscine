@@ -1,18 +1,16 @@
-const dayOfTheYear=(date)=>{
+function dayOfTheYear(date){
+    let year=date.getUTCFullYear()
 
-    let datef= new Date('0001-01-01')
-    let c = date.getUTCFullYear()
 
-    datef.setFullYear(c-1)
+    year=year.toString().padStart(4,"0")
+
+
+    let newYear=new Date(`${year}-01-01`)
 
     
-    let k = Math.floor(((date-datef)/(1000*60*60*24)))+1
-     
-    if (k==367){
-        return 1
-    }
-    return k
-       
+    let day=Math.floor((date-newYear)/(1000*60*60*24))+1
+    
+    return day
 }
 
-console.log( dayOfTheYear(new Date('1664-08-09')))
+console.log(dayOfTheYear(new Date('0001-01-01')));
