@@ -4,7 +4,7 @@ export  function  generateLetters(){
   //  const body = document.querySelector('body')
      let b = 'AZERTYUIOPMLKJHGFDSQWXCVBN'    
 
-    for(let i =0;i<=120;i++){
+    for(let i =0;i<120;i++){
 
  
      if (i<120 /3){
