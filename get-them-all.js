@@ -7,7 +7,7 @@ export const getArchitects = () => {
 
     peope.forEach(element=>{
 
-      if(element.tag == 'a'){
+      if(element.tagName.toLowerCase() == 'a'){
 
         archit.push(element)
       }else{
