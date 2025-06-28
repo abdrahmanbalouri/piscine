@@ -11,7 +11,9 @@ export  function  generateLetters(){
         const kalma = document.createElement('div')
       kalma.textContent=  b[Math.floor(Math.random()*b.length) ]
       kalma.style.fontSize = `${zize}px`
-      kalma.style.fontWeight = '300px'
+      kalma.style.fontWeight = '300'
+      console.log(kalma);
+      
       zize++
            
         document.body.append(kalma)
@@ -20,16 +22,20 @@ export  function  generateLetters(){
         const kalma = document.createElement('div')
       kalma.textContent=  b[Math.floor(Math.random()*b.length) ]
       kalma.style.fontSize = `${zize}px`
-      kalma.style.fontWeight = '400px'
+      kalma.style.fontWeight = '400'
       zize++
+      console.log(kalma);
+      
            
         document.body.append(kalma)
      }else{
           const kalma = document.createElement('div')
       kalma.textContent=  b[Math.floor(Math.random()*b.length) ]
       kalma.style.fontSize = `${zize}px`
-      kalma.style.fontWeight = '600px'
+      kalma.style.fontWeight = '600'
       zize++
+      console.log(kalma);
+      
       console.log(zize);
       
            
