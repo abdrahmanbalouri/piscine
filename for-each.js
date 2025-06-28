@@ -13,10 +13,4 @@ const  forEach =(arr , funct)=>{
 
 }
 
-function kk(arr){
 
-    console.log(arr);
-    
-}
-
-forEach(['banana','kaka','ss'],kk);
