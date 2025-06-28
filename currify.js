@@ -16,9 +16,3 @@ const currify = (fn) => {
 
     }
 }
-const mult2 = (el1, el2) => el1 * el2
-
-
-const mult2Curried = currify(mult2)
-
-console.log(mult2Curried(2)(2)) // result expected 4
