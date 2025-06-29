@@ -26,7 +26,7 @@ div.style.background = `rgb(${(code * 37)%256}, ${(code * 50)%256}, ${(code * 61
 
 
 
-    }else if (key == ' '){
+    }else if (key === ' ' || key === 'Spacebar' || key === 'Escape' ){
 
       let kk = document.querySelectorAll('.note')
 
