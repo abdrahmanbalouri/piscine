@@ -1,4 +1,4 @@
-let last= null
+let last = null
 export function setBox() {
     const box = document.createElement('div')
     box.className = 'box'
@@ -11,18 +11,18 @@ export function setBox() {
 export function createCircle() {
 
     document.addEventListener('click', (event) => {
-   let box = document.querySelector('.box')
+        let box = document.querySelector('.box')
         let boxp = box.getBoundingClientRect()
         const circle = document.createElement('div')
-                if (boxp.left <= event.clientX - 25 && boxp.right >= event.clientX + 25 && boxp.top <= event.clientY - 25 && boxp.bottom >= event.clientY + 25) {
-                            circle.style.background = 'var(--purple)'
+        if (boxp.left <= event.clientX - 25 && boxp.right >= event.clientX + 25 && boxp.top <= event.clientY - 25 && boxp.bottom >= event.clientY + 25) {
+            circle.style.background = 'var(--purple)'
 
-                }else{
-                            circle.style.background = 'white'
+        } else {
+            circle.style.background = 'white'
 
-                }
+        }
         circle.className = 'circle'
-       
+
         circle.style.top = `${event.clientY - 25}px`
         circle.style.left = `${event.clientX - 25}px`
         last = circle
@@ -44,12 +44,9 @@ export function moveCircle() {
         let box = document.querySelector('.box')
         let boxp = box.getBoundingClientRect()
         if (!last.parentNode.classList.contains("box")) {
-            
-        if (boxp.left <= event.clientX - 25-1 && boxp.right >= event.clientX + 25+1 && boxp.top <= event.clientY - 25-1 && boxp.bottom >= event.clientY + 25+1) {
 
+            if (boxp.left <= event.clientX - 25 && boxp.right >= event.clientX + 25 && boxp.top <= event.clientY - 25 && boxp.bottom >= event.clientY + 25) {
                 last.style.background = 'var(--purple)'
-                console.log(last);
-                
                 box.append(last)
             }
 
@@ -58,8 +55,8 @@ export function moveCircle() {
 
             let boxleft = boxp.left
             let boxtop = boxp.top
-            let boxbotom = boxp.bottom - 50
-            let boxrgit = boxp.right - 50
+            let boxbotom = boxp.bottom - 51
+            let boxrgit = boxp.right - 51
 
 
             let x = event.clientX - 25
@@ -70,8 +67,6 @@ export function moveCircle() {
                 x = boxleft
             }
             if (x > boxrgit) {
-
-
                 x = boxrgit
             }
             if (y < boxtop) {
@@ -81,8 +76,8 @@ export function moveCircle() {
             if (y > boxbotom) {
                 y = boxbotom
             }
-            last.style.left = x + 'px'
-            last.style.top = y + 'px'
+            last.style.left = x+1 +  'px'
+            last.style.top = y+1 + 'px'
 
         }
     })
