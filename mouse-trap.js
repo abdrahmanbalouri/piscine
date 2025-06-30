@@ -1,65 +1,92 @@
+let last= null
 export function setBox() {
-  const box = document.createElement('div');
-  box.className = 'box';
-  document.body.append(box);
-}
+    const box = document.createElement('div')
+    box.className = 'box'
 
+    document.body.append(box)
+
+
+
+}
 export function createCircle() {
-  document.addEventListener('click', (event) => {
-    const circle = document.createElement('div');
-    circle.style.background = 'white';
-    circle.className = 'circle';
-    circle.style.top = `${event.clientY - 25}px`;
-    circle.style.left = `${event.clientX - 25}px`;
-    document.body.append(circle);
-  });
+
+    document.addEventListener('click', (event) => {
+   let box = document.querySelector('.box')
+        let boxp = box.getBoundingClientRect()
+        const circle = document.createElement('div')
+                if (boxp.left <= event.clientX - 25 && boxp.right >= event.clientX + 25 && boxp.top <= event.clientY - 25 && boxp.bottom >= event.clientY + 25) {
+                            circle.style.background = 'var(--purple)'
+
+                }else{
+                            circle.style.background = 'white'
+
+                }
+        circle.className = 'circle'
+       
+        circle.style.top = `${event.clientY - 25}px`
+        circle.style.left = `${event.clientX - 25}px`
+        last = circle
+
+        document.body.append(circle)
+
+    })
+
 }
-
 export function moveCircle() {
-  document.addEventListener('mousemove', (event) => {
-    let circles = document.querySelectorAll('.circle');
-    if (circles.length === 0) return;
 
-    let last = circles[circles.length - 1];
-    let box = document.querySelector('.box');
-    if (!box) return;
-    let boxp = box.getBoundingClientRect();
+    document.addEventListener('mousemove', (event) => {
+        let circles = document.querySelectorAll('.circle')
 
-    const circleRadius = 25;
-    const wallThickness = 1;
-    const safeDistance = circleRadius + wallThickness;
+        if (circles.length == 0) return;
+        last.style.top = `${event.clientY - 25}px`
+        last.style.left = `${event.clientX - 25}px`
 
-    if (!last.parentNode.classList.contains('box')) {
-      if (
-        event.clientX > boxp.left + safeDistance &&
-        event.clientX < boxp.right - safeDistance &&
-        event.clientY > boxp.top + safeDistance &&
-        event.clientY < boxp.bottom - safeDistance
-      ) {
-        last.style.background = 'var(--purple)';
-        box.append(last);
-      } else {
-        last.style.background = 'white';
-        last.style.top = `${event.clientY - circleRadius}px`;
-        last.style.left = `${event.clientX - circleRadius}px`;
-      }
-    } else {
+        let box = document.querySelector('.box')
+        let boxp = box.getBoundingClientRect()
+        if (!last.parentNode.classList.contains("box")) {
+            
+        if (boxp.left <= event.clientX - 25 && boxp.right >= event.clientX + 25 && boxp.top <= event.clientY - 25 && boxp.bottom >= event.clientY + 25) {
 
-      let boxLeft = boxp.left + safeDistance;
-      let boxTop = boxp.top + safeDistance;
-      let boxRight = boxp.right - safeDistance;
-      let boxBottom = boxp.bottom - safeDistance;
+                last.style.background = 'var(--purple)'
+                console.log(last);
+                
+                box.append(last)
+            }
 
-      let x = event.clientX;
-      let y = event.clientY;
+        } else {
 
-      if (x < boxLeft) x = boxLeft;
-      if (x > boxRight) x = boxRight;
-      if (y < boxTop) y = boxTop;
-      if (y > boxBottom) y = boxBottom;
 
-      last.style.left = `${x - circleRadius}px`;
-      last.style.top = `${y - circleRadius}px`;
-    }
-  });
+            let boxleft = boxp.left
+            let boxtop = boxp.top
+            let boxbotom = boxp.bottom - 50
+            let boxrgit = boxp.right - 50
+
+
+            let x = event.clientX - 25
+            let y = event.clientY - 25
+
+            if (x < boxleft) {
+
+                x = boxleft
+            }
+            if (x > boxrgit) {
+
+
+                x = boxrgit
+            }
+            if (y < boxtop) {
+                y = boxtop
+
+            }
+            if (y > boxbotom) {
+                y = boxbotom
+            }
+            last.style.left = x + 'px'
+            last.style.top = y + 'px'
+
+        }
+    })
+
+
+
 }
