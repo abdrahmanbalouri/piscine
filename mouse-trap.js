@@ -35,21 +35,19 @@ export function moveCircle(){
 
         let box = document.querySelector('.box')
         let boxp = box.getBoundingClientRect()
-
+          console.log(last.style.background,777);
+          
                
       if (!last.parentNode.classList.contains("box")){
+             
+        if(boxp.left <= event.clientX -25 -1 && boxp.right >= event.clientX +25+1 && boxp.top<=event.clientY -25-1 && boxp.bottom>=event.clientY +25+1){
 
-   
 
-if (
-  event.clientX > boxp.left + 26 &&
-  event.clientX < boxp.right - 26 &&
-  event.clientY > boxp.top + 26 &&
-  event.clientY < boxp.bottom - 26
-) {
-  box.append(last);
-  last.style.background = 'var(--purple)';
-}
+            last.style.background = 'var(--purple)'
+
+            box.append(last)
+        }
+
        }else{
         
 
