@@ -39,7 +39,7 @@ export function moveCircle(){
                
       if (!last.parentNode.classList.contains("box")){
 
-        if(boxp.left <= event.clientX -25 && boxp.right >= event.clientX +25 && boxp.top<=event.clientY -25 && boxp.bottom>=event.clientY +25){
+        if(boxp.left <= event.clientX -25 -1 && boxp.right >= event.clientX +25+1 && boxp.top<=event.clientY -25-1 && boxp.bottom>=event.clientY +25+1){
 
 
 
@@ -58,10 +58,6 @@ export function moveCircle(){
 
         let x = event.clientX -25
         let y = event.clientY -25
-        
-        
-        
-        
         
         if(x<boxleft){
     
