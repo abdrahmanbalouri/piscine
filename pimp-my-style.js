@@ -7,7 +7,6 @@ export const pimp = () => {
   const button = document.querySelector('button')
 
   if (adding) {
-    button.classList.remove('unpimp')
     button.classList.add(styles[index])
     index++
 
