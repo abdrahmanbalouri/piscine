@@ -39,13 +39,20 @@ export function moveCircle(){
                
       if (!last.parentNode.classList.contains("box")){
 
-        if(boxp.left <= event.clientX -25 -1 && boxp.right >= event.clientX +25+1 && boxp.top<=event.clientY -25-1 && boxp.bottom>=event.clientY +25+1){
+       const circleRadius = 25;
+ const wallThickness = 1;
+ const safeDistance = circleRadius + wallThickness;
 
+if (
+  event.clientX > boxp.left + safeDistance &&
+  event.clientX < boxp.right - safeDistance &&
+  event.clientY > boxp.top + safeDistance &&
+  event.clientY < boxp.bottom - safeDistance
+) {
+  box.append(last);
+  last.style.background = 'var(--purple)';
+}
 
-
-            box.append(last)
-            last.style.background = 'var(--purple)'
-        }
 
        }else{
         
