@@ -45,7 +45,7 @@ export function moveCircle() {
         let boxp = box.getBoundingClientRect()
         if (!last.parentNode.classList.contains("box")) {
 
-            if (boxp.left <= event.clientX - 25 && boxp.right >= event.clientX + 25 && boxp.top <= event.clientY - 25 && boxp.bottom >= event.clientY + 25-1) {
+            if (boxp.left <= event.clientX - 25-1 && boxp.right >= event.clientX + 25+1 && boxp.top <= event.clientY - 25-1 && boxp.bottom >= event.clientY + 25+0) {
                 last.style.background = 'var(--purple)'
                 box.append(last)
             }
@@ -53,10 +53,10 @@ export function moveCircle() {
         } else {
 
 
-            let boxleft = boxp.left
-            let boxtop = boxp.top
-            let boxbotom = boxp.bottom - 50
-            let boxrgit = boxp.right - 50
+            let boxleft = boxp.left+1
+            let boxtop = boxp.top+1
+            let boxbotom = boxp.bottom - 50-1
+            let boxrgit = boxp.right - 50-1
 
 
             let x = event.clientX - 25
@@ -76,8 +76,8 @@ export function moveCircle() {
             if (y > boxbotom) {
                 y = boxbotom
             }
-            last.style.left = x +  'px'
-            last.style.top = y+ 'px'
+            last.style.left = x+  'px'
+            last.style.top = y +'px'
 
         }
     })
