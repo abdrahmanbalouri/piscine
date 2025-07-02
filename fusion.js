@@ -15,15 +15,18 @@ const fusion = (...objects) => {
            continue
 
         }
+        if(typeof k.get(v) ==='number'&& typeof objects[i][v] == 'string' ){
+           k.set(v,objects[i][v])
+           continue
+
+        }
         if (Array.isArray(objects[i][v])) {
           k.get(v).push(...objects[i][v]);
         } else if (typeof objects[i][v] === 'string') {
           let b = k.get(v);
           k.set(v, b + ' ' + objects[i][v]);
         } else if (typeof objects[i][v] === 'object') {
-          const mergedObject = fusion(k.get(v), objects[i][v]);
-          //console.log(fusion(k.get(v), objects[i][v]));
-          
+          const mergedObject = fusion(k.get(v), objects[i][v]);          
           k.set(v, mergedObject);
         }else{
              let b = k.get(v);
@@ -46,4 +49,4 @@ const fusion = (...objects) => {
 
   return Object.fromEntries(k);
 };
-console.log((fusion({ a: 'str' }, { a: 1 })));
+console.log(fusion({ arr: [], arr1: [5] },{ arr: [10, 3], arr1: [15, 3], arr2: ["7", "1"] }));
