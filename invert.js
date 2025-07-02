@@ -1,11 +1,20 @@
 const invert =(objet)=>{
 
     let i = {}
+    //let cc 
 
     for(const kk in objet){
 
-       i[objet[kk]]=kk        
+         if(objet.hasOwnProperty(kk)){
+                   
+             i[objet[kk]]=kk        
 
+        }
+
+ 
+        
+        
+      
     }
 
 
@@ -13,4 +22,4 @@ const invert =(objet)=>{
   return i
 }
 
-console.log(invert({'k':5,'g':6}));
+console.log(invert({ f: 5, __proto__: { d: 6 } }));
