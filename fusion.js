@@ -14,6 +14,11 @@ const fusion = (...objects) => {
           //console.log(fusion(k.get(v), objects[i][v]));
           
           k.set(v, mergedObject);
+        }else{
+             let b = k.get(v);
+          k.set(v, b+ objects[i][v]);
+
+
         }
       } else {
         if (Array.isArray(objects[i][v])) {
@@ -31,4 +36,4 @@ const fusion = (...objects) => {
 
   return Object.fromEntries(k);
 };
-console.log(fusion({ a: 1, b: { c: "Salem" } }, { a: 10, x: [], b: { c: "alem" } }));
+console.log(fusion({ nbr: 12 }, { nbr: 23 }));
