@@ -47,11 +47,14 @@ const reduceKeys =(object,callback,m='')=>{
 
         c = c.slice(2,)
        }
+       if(c[0]==':'){
+        c= c.slice(1,)
+       }
 
 return c
 
 }
-console.log(reduceKeys(nutrients, (acc, cr) =>acc.concat(', ', cr)))
+console.log(reduceKeys(nutrients, (acc, cr) =>acc.concat(':', cr)))
 
 
 
