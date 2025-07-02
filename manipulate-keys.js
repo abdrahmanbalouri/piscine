@@ -19,7 +19,7 @@ const filterKeys =(nutrients,callback)=>{
 
   return Object.fromEntries(k)
 }
-mapKeys =(nutrients ,callback)=>{
+const mapKeys =(nutrients ,callback)=>{
     let j = new Map()
 
      for(const v in nutrients){
