@@ -39,8 +39,8 @@ const mapValues =(nutrients ,callback)=>{
 
 }
 
-const reduceValues =(object,callback)=>{
-     let c =0
+const reduceValues =(object,callback,m=0)=>{
+     let c =m
     for(const v in object){
 
         c=callback(c,object[v])
@@ -52,6 +52,8 @@ const reduceValues =(object,callback)=>{
 return c
 
 }
+console.log(reduceValues({ a: 1, b: 2, c: 3 }, (acc, cr) => acc + cr, 3));
+
 
 
 // console.log( mapValues(
