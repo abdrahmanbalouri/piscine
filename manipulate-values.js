@@ -1,5 +1,10 @@
-const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
-
+//  const  groceriesCart= {
+//     tomato: 200,
+//     vinegar: 80,
+//     oil: 50,
+//     onion: 220,
+//     garlic: 22,
+//   }
 const filterValues =(nutrients,callback)=>{
     let k = new Map()
      for(const v in nutrients){
@@ -19,7 +24,7 @@ const filterValues =(nutrients,callback)=>{
 
   return Object.fromEntries(k)
 }
-const mapValues =(nutrient ,callback)=>{
+const mapValues =(nutrients ,callback)=>{
     let j = new Map()
 
      for(const v in nutrients){
@@ -47,10 +52,12 @@ const reduceValues =(object,callback)=>{
 return c
 
 }
-console.log(reduceValues(nutrients, (acc, cr) => acc + cr))
 
-// console.log(mapValues(nutrients, (v) => v+1))
 
-// console.log(filterValues(nutrients, (nutrient) => nutrient <= 12))
+// console.log( mapValues(
+//       filterValues(groceriesCart, (v) => v >= 200),
+//       (ele) => ele - 100,
+//     ),)
+
 
 
