@@ -42,7 +42,11 @@ const reduceKeys =(object,callback,m='')=>{
 
 
     }
+       if(c[0]==','){
 
+
+        c = c.slice(2,)
+       }
 
 return c
 
