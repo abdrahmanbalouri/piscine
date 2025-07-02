@@ -10,6 +10,11 @@ const fusion = (...objects) => {
            continue
 
         }
+        if(typeof k.get(v) ==='string'&& typeof objects[i][v] == 'number' ){
+           k.set(v,objects[i][v])
+           continue
+
+        }
         if (Array.isArray(objects[i][v])) {
           k.get(v).push(...objects[i][v]);
         } else if (typeof objects[i][v] === 'string') {
@@ -41,4 +46,4 @@ const fusion = (...objects) => {
 
   return Object.fromEntries(k);
 };
-console.log(fusion({ a: 1, b: { c: "Salem" } }, { a: 10, x: [], b: { c: "alem" } }));
+console.log((fusion({ a: 'str' }, { a: 1 })));
