@@ -9,7 +9,13 @@ const fusion = (...objects) => {
 
          }else{
          let b =k.get(v);
-                     k.set(v,b+objects[i][v])
+         if(typeof objects[i][v] == 'string'){
+                    k.set(v,b+' '+objects[i][v])
+
+         }else{
+            k.set(v,b+objects[i][v])
+
+         }
 
 
          }
@@ -32,4 +38,4 @@ const fusion = (...objects) => {
   return Object.fromEntries(k);
 };
 
-console.log(fusion({ a: 1, b: { c: "Salem" } }, { a: 10, x: [], b: { c: "alem" } }));
+console.log(fusion(fusion({ str: 'hello' }, { str: 'there' })));
