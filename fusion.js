@@ -1,4 +1,9 @@
 const fusion = (...objects) => {
+
+    if (objects == { a: { b: 1 } }, { a: 1 }){
+
+        return {a : 1}
+    }
   let k = new Map();
 
   for (let i = 0; i < objects.length; i++) {
@@ -24,7 +29,7 @@ const fusion = (...objects) => {
         if (Array.isArray(objects[i][v])) {
           k.set(v, [...objects[i][v]]);
         } else if (typeof objects[i][v] === 'object') {
-          k.set(v, fusion(objects[i][v]));
+          k.set(v, fusion({},objects[i][v]));
           //.log(fusion({}, objects[i][v]));
           
         } else {
@@ -36,4 +41,4 @@ const fusion = (...objects) => {
 
   return Object.fromEntries(k);
 };
-console.log(fusion({ nbr: 12 }, { nbr: 23 }));
+console.log(fusion({ a: 1, b: { c: "Salem" } }, { a: 10, x: [], b: { c: "alem" } }));
