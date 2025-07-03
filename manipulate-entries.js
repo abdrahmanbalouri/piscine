@@ -36,7 +36,7 @@ const totalCalories =(cart)=>{
 
   const bb =   nutritionDB[k]  
 
-  return s +  ((bb.calories * v)/100)
+  return Number((s +  ((bb.calories * v)/100)).toFixed(2))
 
 
     },0)
