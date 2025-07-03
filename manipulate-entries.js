@@ -63,7 +63,7 @@ const cartTotal =(cart)=>{
          const f ={}
  for (const n in c){
 
-    f[n] = ((c[n]*v)/100)
+    f[n] = Number(((c[n]*v)/100).toFixed(3))
 
 
  }        
@@ -79,3 +79,4 @@ return [k,f]
 }
 
 
+console.log(67.87200000000001.toFixed(3));
