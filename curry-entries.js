@@ -89,4 +89,4 @@ const mapAverage =(objet)=>{
 
 
 }
-console.log((reduceScore(personnel,420)));
+console.log((mapAverage(personnel)));
