@@ -28,13 +28,13 @@ const mapCurry =(fn)=>{
 
 }
 
-const reduceCurry = (acc=0,fn)=>{
-    let b= acc
+const reduceCurry = (fn)=>{
+    
 
-    return function(objet){
+    return function(objet,acc){
      let j = Object.entries(objet)
 
-     let  b =  j.reduce(b,fn)
+     acc =  j.reduce(acc,fn)
 
             return acc
 
