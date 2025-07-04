@@ -1,13 +1,13 @@
-const  debounce =(func,time=0)=>{
-  let id 
-    return function(...gg){
+const debounce = (func, time = 0) => {
+    let id
+    return function (...gg) {
 
         clearTimeout(id)
-        id = setTimeout(()=>{
+        id = setTimeout(() => {
 
-                    func(...gg)
+            func(...gg)
 
-        },time)
+        }, time)
 
 
 
@@ -15,48 +15,43 @@ const  debounce =(func,time=0)=>{
 
     }
 
-   
+
 
 
 }
 
-const opDebounce =(func,time = 0,option = {leading:true})=>{
-    let  cal = false
+const opDebounce = (func, time = 0, option = { leading: false }) => {
+    let cal = false
     let id
 
-  return function(...arg){
+    return function (...arg) {
 
- if (option.leading){
-         if(!cal){
+        if (option.leading) {
+            if (!cal) {
                 func(...arg)
-            cal =true
-         }
-           
-         clearTimeout(id)
+                cal = true
+            }
 
-         id =setTimeout(()=>{
+            clearTimeout(id)
+
+            id = setTimeout(() => {
 
 
-           func(...arg)
+                func(...arg)
 
-             cal =false
-         },time)
+                cal = false
+            }, time)
 
-        
-    }else{
-clearTimeout(id)
 
-         id =setTimeout(()=>{
-           func(...arg)
+        } else {
+            clearTimeout(id)
 
-         },time)
+            id = setTimeout(() => {
+                func(...arg)
+
+            }, time)
+
+        }
 
     }
-
-  }
-   
-    
-
-
-
 }
