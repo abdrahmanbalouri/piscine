@@ -5,7 +5,11 @@ function replica(...objs) {
 
     let b = Object.assign(k,...objs)
 
+    
+
+
   return b
 }
 
-console.log(replica({ a: 2 }, { a: [4] }).a);
+
+console.log( replica({ a: { b: 1, c: 2 } }, { a: { c: 23 } }), { a: { b: 1, c: 23 } });
