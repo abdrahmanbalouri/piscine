@@ -1,6 +1,6 @@
 const pronoun = (s) => {
 
-    let m= s.replace(',','')
+    let m= s.replaceAll(',','')
     
     let b = m.split('\n')
     console.log(b);
@@ -152,4 +152,4 @@ const pronoun = (s) => {
     return k
 }
 
-console.log(   pronoun('she she she she is'));
+console.log(   pronoun('I buy,\ni to,\nYOU buy,\nit have,\nIt buys,\nit is,\nyou go'));
