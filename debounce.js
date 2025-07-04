@@ -21,7 +21,7 @@ const debounce = (func, time = 0) => {
 }
 
 const opDebounce = (func, time = 0, option = { leading: false }) => {
-    let cal = false
+    let cal 
     let id
 
     return function (...arg) {
