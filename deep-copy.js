@@ -7,7 +7,7 @@ const deepCopy =(objet)=>{
 
    let cop = Array.isArray(objet)?[]:{}
 
-   for(key in objet){
+   for(let key in objet){
    
     cop [key] = deepCopy(objet[key])
    }
