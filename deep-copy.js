@@ -9,10 +9,12 @@ const deepCopy =(objet)=>{
    let cop = Array.isArray(objet)?[]:{}
 
    for(let key in objet){
-    
-    if(typeof objet[key] === 'function'){
+    if(objet[key] instanceof RegExp){
+
         return [...objet]
     }
+    
+    
     cop [key] = deepCopy(objet[key])
    }
    return cop
@@ -21,11 +23,7 @@ const deepCopy =(objet)=>{
 
 
 
-console.log(deepCopy( [console.log, /hello/]));
-let k = [console.log, /hello/]
-  let b = deepCopy(k)
-
-  b.push(4)
-  console.log(k);
+console.log(deepCopy([console.log, /hello/]));
+;
   
 
