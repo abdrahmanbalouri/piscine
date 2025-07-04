@@ -11,10 +11,8 @@ const deepCopy =(objet)=>{
    for(let key in objet){
     
     if(typeof objet[key] === 'function'){
-
-        return objet
+        return [...objet]
     }
-   
     cop [key] = deepCopy(objet[key])
    }
    return cop
@@ -24,4 +22,10 @@ const deepCopy =(objet)=>{
 
 
 console.log(deepCopy( [console.log, /hello/]));
+let k = [console.log, /hello/]
+  let b = deepCopy(k)
+
+  b.push(4)
+  console.log(k);
+  
 
