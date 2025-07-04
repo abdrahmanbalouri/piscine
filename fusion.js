@@ -27,7 +27,6 @@ const fusion = (...objects) => {
           k.set(v, b + ' ' + objects[i][v]);
         } else if (typeof objects[i][v] === 'object') {
           const mergedObject = fusion(k.get(v), objects[i][v]);
-          console.log(objects[i][v]);          
           k.set(v, mergedObject);
         }else{
             let b = k.get(v);
