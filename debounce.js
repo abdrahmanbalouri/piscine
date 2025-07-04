@@ -33,19 +33,13 @@ const opDebounce = (func, time = 0, option = { leading: false }) => {
             }
 
             clearTimeout(id)
-
             id = setTimeout(() => {
-
-
-                func(...arg)
-
                 cal = false
             }, time)
 
 
         } else {
             clearTimeout(id)
-
             id = setTimeout(() => {
                 func(...arg)
 
