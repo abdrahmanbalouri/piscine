@@ -8,13 +8,7 @@ const deepCopy =(objet)=>{
 
    let cop = Array.isArray(objet)?[]:{}
 
-   for(let key in objet){
-    if(objet[key] instanceof RegExp){
-
-        return [...objet]
-    }
-    
-    
+   for(let key in objet){ 
     cop [key] = deepCopy(objet[key])
    }
    return cop
